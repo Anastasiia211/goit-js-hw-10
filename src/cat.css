@@ -1,0 +1,87 @@
+@import '~node_modules/modern-normalize/modern-normalize.css';
+@import '~node_modules/slim-select/dist/slimselect.css';
+.container {
+  max-width: 1700px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.cat-info {
+  margin-top: 40px;
+  display: flex;
+  column-gap: 40px;
+  flex-wrap: wrap;
+}
+
+h2 {
+  text-shadow: 0.1em 0.1em 0.1em #9275e4;
+  font-size: 76px;
+  text-align: center;
+  color: darkslateblue;
+  text-decoration: overline;
+}
+
+.image {
+  max-width: 100%;
+  object-fit: cover;
+}
+
+text {
+  max-width: 100%;
+}
+
+.description {
+  text-align: center;
+  width: auto;
+  font-size: 50px;
+  text-transform: capitalize;
+}
+
+.temperament {
+  margin-bottom: 25px;
+  text-align: center;
+  font-size: 48px;
+}
+
+.loader {
+  text-indent: -9999;
+  width: 48px;
+  height: 48px;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+  transform: translate(-50%, 50%);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  right: 50%;
+}
+.loader::after {
+  content: '';
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #ff3d00;
+  width: 16px;
+  height: 16px;
+
+  border-radius: 50%;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.hidden {
+  display: none;
+}
