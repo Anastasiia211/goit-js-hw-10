@@ -4,9 +4,7 @@ const URL = 'https://api.thecatapi.com/v1';
 const fetchBreeds = () => {
     const point = '/breeds';
 
-    return axios.get(`${URL}${point}`).then(response => {
-        return response;
-    });
+    return axios.get(`${URL}${point}`)
 };
 
 const fetchCatByBreed = breedId => {
@@ -16,9 +14,7 @@ const fetchCatByBreed = breedId => {
         breed_ids: breedId,
     });
 
-    return axios.get(`${URL}${point}?${params}`).then(response => {
-        return response;
-    });
+    return axios.get(`${URL}${point}?${params}`)
 };
 
 export { fetchBreeds, fetchCatByBreed };
